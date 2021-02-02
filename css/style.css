@@ -3,6 +3,12 @@
     --pink-color: #F1E4E6;
     --pink-dark-color: #F16D7F;
     --grey-color: #9F9F9F;
+    --beige-color: #F8F8F8;
+    --dark-grey-color: #5D5D5D;
+    --light-grey-color:  #E1E1E1;
+    --pink-border-color:  #FF6A6A;
+    --pink-browse-color: #F26376;
+    --light-black-color: #222224;
 }
 
 body {
@@ -73,7 +79,6 @@ body {
     display: flex;
     justify-content: flex-start;
     padding-right: 400px;
-
 }
 
 .intro__heading-wrapper {
@@ -81,7 +86,6 @@ body {
     background-color: var(--pink-color);
     display: flex;
     align-items: center;    
-    
 }
 
 .intro__heading {
@@ -168,11 +172,13 @@ body {
     color: var(--pink-dark-color);
     text-align: center;
 }
+
 .featured {
     margin-top: 86px;
     display: flex;
     flex-direction: column;
 }
+
 .featured__heading {
     font-size: 30px;
     font-style: normal;
@@ -201,7 +207,7 @@ body {
 }
 
 .featured__item {
-    background-color: #F8F8F8;
+    background-color:var(--beige-color);
     width: 360px;
     height: 581px;
     margin-bottom: 30px;
@@ -224,7 +230,7 @@ body {
     line-height: 17px;
     margin-top: 14px;
     margin-left: 18px;
-    color:#5D5D5D; 
+    color:var(--dark-grey-color); 
 }
 
 .featured__price {
@@ -240,7 +246,7 @@ body {
 .featured__browse {
     align-self: center;
     text-decoration: none;
-    border: 1px solid #FF6A6A;
+    border: 1px solid var(--pink-border-color);
     width: 211px;
     height: 33px;
     margin-top: 48px;
@@ -250,13 +256,13 @@ body {
     line-height: 19px;
     margin-top: 18px;
     margin-left: 18px;
-    color: #F26376;
+    color: var(--pink-browse-color);
     text-align: center;
     padding-top: 14px;
 }
 
 .advantages {
-    background-color: #222224;
+    background-color: var(--light-black-color);
     margin-top: 85px;
     padding-top: 103px;
 }
@@ -354,7 +360,7 @@ body {
 .footer__input {
     margin-left: 110px;
     margin-top: 39px ;
-    background: #E1E1E1;
+    background:var(--light-grey-color);
     width: 234px;
     height: 49px;
     border-radius: 25px  0  0 25px;
@@ -381,7 +387,7 @@ body {
 }
 
 .footer__bottom-bg {
-    background-color: #222224;
+    background-color: var(--light-black-color);
 }
 
 .footer__bottom {
