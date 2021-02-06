@@ -37,6 +37,22 @@ body {
     margin: 0 auto;
 }
 
+.top__wrapper {
+    background-color: #F8F3F4;
+    height: 148px;
+    display: flex;
+    align-items: center;
+}
+
+.top__header {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F16D7F;
+    text-transform: uppercase;
+}
+
 .header {
     background-color: var(--black-color);
     position: relative;
@@ -63,7 +79,7 @@ body {
 }
 
 .header__nav {
-    display:none;
+    display: none;
     position: absolute;
     left: 1368px;
     top: 75px;
@@ -75,7 +91,6 @@ body {
 .header__nav-img {
     margin-top: 16px;
     margin-left: 203px;
-
 }
 
 .header__nav-heading {
@@ -93,7 +108,7 @@ body {
 }
 
 .header__nav_part-heading {
-    margin-top:20px;
+    margin-top: 20px;
     color: var(--pink-dark-color);
     text-transform: uppercase;
     font-weight: 400;
@@ -108,7 +123,6 @@ body {
 
 .header__nav_part-item {
     margin-top: 11px;
-
 }
 
 .header__nav_part-link {
@@ -317,7 +331,7 @@ body {
     width: 360px;
     height: 581px;
     background-color:rgba(58,56,56,0.86);
-    top:0px;
+    top: 0px;
 }
 
 .featured__overlay-btn {
@@ -333,7 +347,7 @@ body {
     align-items: center;
     justify-content: space-around;
 }
- 
+
 .featured__browse {
     align-self: center;
     text-decoration: none;
@@ -366,7 +380,7 @@ body {
 .advantages__item {
     display: flex;
     flex-direction: column;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
 }
 
@@ -394,7 +408,6 @@ body {
     background-image: url(../img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 .footer__wrapper {
@@ -446,7 +459,6 @@ body {
     text-align: center;
     text-transform: uppercase ;
 }
-
 
 .footer__input {
     margin-left: 110px;
@@ -504,32 +516,15 @@ body {
     margin-left: 7px;
 }
 
-.registration__wrapper {
-  background-color: #F8F3F4;
-  height: 148px;
-  display: flex;
-  align-items: center;
-
-}
-
-.registration__header {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    color: #F16D7F;
-    text-transform: uppercase;
-}
-
 .registration__body {
-  margin-top: 64px;
-  display: flex;
+    margin-top: 64px;
+    display: flex;
 }
 
 .registration__form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
 }
 
 .registration__label {
@@ -541,10 +536,10 @@ body {
 }
 
 .registration__input {
-  margin-top: 20px;
-  border: 1px solid #A4A4A4;
-  width: 359px;
-  height: 44px;
+    margin-top: 20px;
+    border: 1px solid #A4A4A4;
+    width: 359px;
+    height: 44px;
 }
 
 .registration::placeholder {
@@ -556,86 +551,86 @@ body {
 }
 
 .registration__label-radio {
-  font-weight: 300;
-  font-style: normal;
-  font-size: 11px;
-  line-height: 13px;
-  margin-left: 10px;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 13px;
+    margin-left: 10px;
 }
 
 .registration__radio {
-  margin-top: 31px;
+    margin-top: 31px;
 }
 
 .registration__radio-wrapper {
-  display: flex;
+    display: flex;
 }
 
 .registration__instructions {
-  font-weight: 300;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 16px;
-  color: #B1B1B1;
-  margin-top: 15px;
-  width:359px;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+    margin-top: 15px;
+    width:359px;
 }
 
 .registration__submit {
- display: flex;
- justify-content: space-around;
- align-items: center;
- background: var(--pink-dark-color);
-  width: 167px;
-  height: 50px;
-  border-style: none;
-  font-weight:400;
-  font-size: 14px;
-  line-height: 17px;
-  color: white;
-  text-transform: uppercase;
-  margin-top: 55px;
-  margin-bottom: 96px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--pink-dark-color);
+    width: 167px;
+    height: 50px;
+    border-style: none;
+    font-weight:400;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 55px;
+    margin-bottom: 96px;
 }
 
 .registration__loyalty {
-  list-style: none;
-  margin-left: 128px;
-  margin-top: 64px;
+    list-style: none;
+    margin-left: 128px;
+    margin-top: 64px;
 }
 
 .registration__loyalty-header {
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 29px;
-  text-transform: uppercase;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
 }
 
 .registration__loyalty-text {
-  margin-top: 22px;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 29px;
+    margin-top: 22px;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .registration__loyalty-list {
-  list-style: none;
-  margin-top: 5px;
-  margin-left: -43px;
+    list-style: none;
+    margin-top: 5px;
+    margin-left: -43px;
 }
 
 .registration__loyalty-list_item {
-  margin-top: 16px;
-  margin-left: 20px;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 29px;
+    margin-top: 16px;
+    margin-left: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .registration__loyalty-list_item:before {
-  content: url('../img/done.svg');
-  margin-right: 23px;
-  margin-left: 20px;
+    content: url('../img/done.svg');
+    margin-right: 23px;
+    margin-left: 20px;
 }
