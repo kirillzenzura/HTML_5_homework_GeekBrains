@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__wrapper">
+            <div class="header__logo-wrapper">
+                <img class="header__logo" src="./img/logo.svg" alt="logo" width="44" height="38">
+                <!--<input type="search" class="search">-->
+                <img src="./img/loupe.svg" alt="лупа" width="27" height="28">
+            </div>
+            <ul class="header__list">
+                <li><button class="header__button" id="menuButton">
+                        <img src="./img/burger.svg" alt="burger" width="32" height="32">
+                    </button>
+                </li>
+                <li><button class="header__button">
+                        <img src="./img/user.svg" alt="user" width="32" height="32">
+                    </button>
+                </li>
+                <li><button class="header__button">
+                        <img src="./img/basket.svg" alt="basket" width="32" height="32">
+                    </button>
+                </li>
+            </ul>
+            <nav class="header__nav" id="menu">
+                <img class="header__nav-img" src="./img/close-button.svg" alt="close">
+                <h2 class="header__nav-heading">menu</h2>
+                <ul class="header__nav-list">
+                    <li>
+                        <h3 class="header__nav_part-heading">man</h3>
+                        <ul class="header__nav_part-list">
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Accessories</a>
+                            </li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Bags</a></li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Denim</a></li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">T-Shirts</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="header__nav_part-heading">woman</h3>
+                        <ul class="header__nav_part-list">
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Accessories</a>
+                            </li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Jackets &
+                                    Coats</a></li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Polos</a></li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">T-Shirts</a>
+                            </li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Shirts</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="header__nav_part-heading">kids</h3>
+                        <ul class="header__nav_part-list">
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Accessories</a>
+                            </li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Jackets &
+                                    Coats</a></li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Polos</a></li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">T-Shirts</a>
+                            </li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Shirts</a></li>
+                            <li class="header__nav_part-item"><a class="header__nav_part-link" href="#">Bags</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="top__wrapper">
+            <h1 class="top__header container">Registration</h1>
+        </section>
+        <section class="registration">
+            <div class="registration__body container">
+                <form action="" class="registration__form">
+                    <h2 class="registration__label">Your Name</h2>
+                    <input type="text" class="registration__input" placeholder="First Name">
+                    <input type="text" class="registration__input" placeholder="Last Name">
+                    <div class="registration__radio-wrapper">
+                        <h2 class="registration__label-radio"><input type="radio" name="male" value="Male"
+                                class="registration__radio" placeholder="Last Name"> Male</h2>
+
+                        <h2 class="registration__label-radio"><input type="radio" name="male" value="Female"
+                                class="registration__radio" placeholder="Last Name"> Female</h2>
+                    </div>
+
+                    <h2 class="registration__label">Login details</h2>
+                    <input type="email" class="registration__input" placeholder="Email">
+                    <input type="password" class="registration__input" placeholder="Password">
+                    <p class="registration__instructions">Please use 8 or more characters, with at least 1 number and a
+                        mixture of uppercase and lowercase letters</p>
+                    <button class="registration__submit">join now <img src="./img/arrow.svg" alt="arrow"></button>
+
+                </form>
+                <ul class="registration__loyalty">
+                    <li class="registration__loyalty-header">loyalty has its perks</li>
+                    <li class="registration__loyalty-text">Get in on the loyalty program where you can earn points and
+                        unlock serious perks. Starting with these as soon as you join:</li>
+                    <li>
+                        <ul class="registration__loyalty-list">
+                            <li class="registration__loyalty-list_item">15% off welcome offer</li>
+                            <li class="registration__loyalty-list_item">Free shipping, returns and exchanges on all
+                                orders</li>
+                            <li class="registration__loyalty-list_item">$10 off a purchase on your birthday</li>
+                            <li class="registration__loyalty-list_item">Early access to products</li>
+                            <li class="registration__loyalty-list_item">Exclusive offers & rewards</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__top ">
+            <div class="footer__wrapper  container">
+                <div class="footer__quote">
+                    <img src="./img/face-icon.svg" alt="face">
+                    <p class="footer__quote-text">“Vestibulum quis porttitor dui! Quisque <span
+                            class="footer__coursive">viverra nunc mi, a pulvinar purus condimentum“</span></p>
+                </div>
+                <form class="footer__form" action="">
+                    <h2 class="footer__heading">subscribe</h2>
+                    <p class="footer__text"> for our newletter and promotion</p>
+                    <input class="footer__input" type="email" placeholder="Enter Your Email">
+                    <input class="footer__subscribe" type="button" value="Subscribe">
+                </form>
+            </div>
+        </section>
+        <section class="footer__bottom-bg">
+            <div class="footer__bottom container">
+                <p class="footer__copyright">© 2021 Brand All Rights Reserved.</p>
+                <ul class="footer__list">
+                    <li class="footer__link"><img src="./img/fb-icon.svg" alt="facebook"></li>
+                    <li class="footer__link"><img src="./img/inst-icon.svg" alt="instagram"></li>
+                    <li class="footer__link"><img src="./img/pint-icon.svg" alt="pinterest"></li>
+                    <li class="footer__link"><img src="./img/tweet-icon.svg" alt="twitter"></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
