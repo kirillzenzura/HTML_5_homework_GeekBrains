@@ -1,0 +1,47 @@
+.intro {
+    display: flex;
+    justify-content: center;
+    background-color: $pink-color;
+    
+    .intro__overlay {
+        display: none;
+        position: absolute;
+        width: 1368px;
+        left: 0px;
+        min-height: 764px;
+        background-color: $intro-overlay-color;
+    }
+    
+    .intro__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        padding-right: 400px;
+    }
+    
+    .intro__heading-wrapper {
+        width: 100%;
+        background-color: $pink-color;
+        display: flex;
+        align-items: center;    
+    }
+    
+    .intro__heading {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 58px;
+        text-transform: uppercase;
+    }
+    
+    .intro__text {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        display: block;
+    }
+    
+    .intro__pink {
+        color: $pink-dark-color;
+    }
+}
