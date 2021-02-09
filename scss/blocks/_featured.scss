@@ -1,0 +1,123 @@
+.featured {
+    margin-top: 86px;
+    display: flex;
+    flex-direction: column;
+
+    .featured__heading {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: center;
+        align-self: center;
+    }
+    
+    .featured__heading-text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: center;
+        align-self: center;
+        color: $grey-color;
+        margin-top: 6px;
+    }
+    
+    .featured__list {
+        margin-top: 48px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .featured__item {
+        background-color: $beige-color;
+        width: 360px;
+        height: 581px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    .featured__header {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        margin-top: 25px;
+        margin-left: 18px;
+        text-transform: uppercase; 
+    }
+    
+    .featured__text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 17px;
+        margin-top: 14px;
+        margin-left: 18px;
+        color: $dark-grey-color; 
+    }
+    
+    .featured__price {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        margin-top: 18px;
+        margin-left: 18px;
+        color: $pink-dark-color; 
+    }
+    
+    .featured__overlay {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 360px;
+        height: 581px;
+        background-color:rgba(58,56,56,0.86);
+        top: 0px;
+    }
+    
+    .featured__item:hover, .featured__item:focus {
+        .featured__overlay{
+            display: flex;
+        }
+    }
+    
+    .featured__overlay-btn {
+        width: 138px;
+        height: 43px;
+        border: 1px solid white;
+        background: rgba(58, 56, 56, 0.86);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .featured__browse {
+        align-self: center;
+        text-decoration: none;
+        border: 1px solid var(--pink-border-color);
+        width: 211px;
+        height: 33px;
+        margin-top: 48px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        margin-top: 18px;
+        margin-left: 18px;
+        color: $pink-browse-color;
+        text-align: center;
+        padding-top: 14px;
+    }
+    
+    .featured__browse:hover, .featured__browse:focus {
+        opacity: 0.7;
+    }
+}

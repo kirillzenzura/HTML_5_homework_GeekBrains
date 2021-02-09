@@ -1,0 +1,108 @@
+.header {
+    background-color: $black-color;
+    position: relative;
+
+    .header__wrapper {
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .header__logo-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    
+    .header__logo {
+        margin: 0 41px 0 0;
+    }
+    
+    .header__search {
+        display: none;
+        border-radius: 50px;
+        height: 35px;
+        margin-left: 10px;
+        border: none;
+    }
+    
+    .header__logo:hover, .header__logo:focus, .header__button:focus, .header__button:hover {
+        opacity: 0.5;
+    }
+
+    .header__logo-wrapper:focus, .header__logo-wrapper:hover {
+        .header__search {
+            display: block;
+        }    
+    }
+    
+    .header__list {
+        display: flex;
+    }
+    
+    .header__nav {
+        display: none;
+        position: absolute;
+        left: 1368px;
+        top: 75px;
+        width: 232px;
+        height: 764px;
+        background-color: #fff;
+        .header__nav-img {
+            margin-top: 16px;
+            margin-left: 203px;
+        }
+        
+        .header__nav-heading {
+            margin-top: 9px;
+            margin-left: 34px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+        }
+        
+        .header__nav-list {
+            margin-top: 4px;
+            margin-left: 33px;
+        }
+        
+        .header__nav_part-heading {
+            margin-top: 20px;
+            color: $pink-dark-color;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        
+        .header__nav_part-list {
+            margin-top: 1px;
+            margin-left: 22px;
+        }
+        
+        .header__nav_part-item {
+            margin-top: 11px;
+        }
+        
+        .header__nav_part-link:focus, .header__nav_part-link:hover {
+            opacity: 0.8;
+            color: $pink-dark-color;
+        }
+        
+        .header__nav_part-link {
+            text-decoration: none;
+            color: $grey-menu-color;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        
+    }
+    
+    .header__button {
+        background-color: transparent;
+        border: none;
+        margin: 0 0 0 33px;
+    }
+}
