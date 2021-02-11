@@ -21,15 +21,15 @@
             </div>
             <ul class="header__list">
                 <li><button class="header__button" id="menuButton">
-                        <img src="./img/burger.svg" alt="burger" width="32" height="32">
+                        <img src="./img/burger.svg" alt="burger" max-width="32" height="32">
                     </button>
                 </li>
-                <li><button class="header__button">
-                        <img src="./img/user.svg" alt="user" width="32" height="32">
+                <li><button class="header__button header__button_hide">
+                        <img src="./img/user.svg" alt="user" max-width="32" height="32">
                     </button>
                 </li>
-                <li><button class="header__button">
-                        <img src="./img/basket.svg" alt="basket" width="32" height="32">
+                <li><button class="header__button header__button_hide">
+                        <img src="./img/basket.svg" alt="basket" max-width="32" height="32">
                     </button>
                 </li>
             </ul>
@@ -112,7 +112,7 @@
                                     class="cart__img">
                             </li>
                             <li class="cart__info">
-                                <h2 class="cart__item_header">MANGO PEOPLE T-SHIRT</h2>
+                                <h2 class="cart__item_header">mango people t-shirt</h2>
                                 <p class="cart__item_text">Price: <span class="cart_pink">$300</span></p>
                                 <p class="cart__item_text">Color: Red</p>
                                 <p class="cart__item_text">Size: Xl </p>
@@ -133,9 +133,9 @@
             <div class="cart__finish">
                 <form class="cart__adress" action="">
                     <h2 class="cart__adress_header">shipping adress</h2>
-                    <input type="text" class="cart__input" placeholder="  Country">
-                    <input type="text" class="cart__input" placeholder="  State">
-                    <input type="text" class="cart__input" placeholder="  Postcode / Zip">
+                    <input type="text" class="cart__input" placeholder="Country">
+                    <input type="text" class="cart__input" placeholder="State">
+                    <input type="text" class="cart__input" placeholder="Postcode / Zip">
                     <button type="submit" class="cart__adress_button">get a quote</button>
                 </form>
                 <div class="cart__total">
@@ -158,8 +158,10 @@
                 <form class="footer__form" action="">
                     <h2 class="footer__heading">subscribe</h2>
                     <p class="footer__text"> for our newletter and promotion</p>
-                    <input class="footer__input" type="email" placeholder="Enter Your Email">
-                    <input class="footer__subscribe" type="submit" value="Subscribe">
+                    <div class="footer__subscribe-wrapper">
+                        <input class="footer__input" type="email" placeholder="Enter Your Email">
+                        <input class="footer__subscribe" type="submit" value="Subscribe">
+                    </div>
                 </form>
             </div>
         </section>

@@ -2,10 +2,20 @@
     background-image: url(../img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(244,244,244,0.7);
+    @include tablet {
+        flex-direction: column;
+    }
+
     .footer__wrapper {
         display: flex;
-        justify-content: space-between;
-        height: 448px;
+        justify-content: space-around;
+        min-height: 448px;
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            min-height: 693px;
+        }    
     }
     
     .footer__quote {
@@ -13,7 +23,7 @@
         flex-direction: column;
         margin-top: 97px;
         align-items: center;
-        width: 360px;
+        width: 50%;
     }
     
     .footer__quote-text {
@@ -23,6 +33,10 @@
         font-weight: 400;
         line-height: 24px;
         text-align: center;
+        @include mobile {
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
     
     .footer__coursive {
@@ -30,33 +44,48 @@
     }
     
     .footer__form {
-        width: 557px;
         align-self: center;
+        justify-content: center;
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    .footer__subscribe-wrapper {
+        display: flex;
     }
     
     .footer__heading {
+        align-self: center;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: 40px;
         text-align: center;
         text-transform: uppercase ;
+        @include mobile {
+            line-height: 36px;
+        }
     }
     
     .footer__text {
+        justify-content: center;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 30px;
-        text-align: center;
         text-transform: uppercase ;
+        @include mobile {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+        }
     }
     
     .footer__input {
-        margin-left: 110px;
         margin-top: 39px ;
         background: $light-grey-color;
-        width: 234px;
+        width: 95%;
         height: 49px;
         border-radius: 25px  0  0 25px;
         font-size: 14px;
@@ -83,6 +112,7 @@
         line-height: 16px;
         border: none;
         color: white;
+        margin-top: 39px
     
     }
     
@@ -92,16 +122,14 @@
     }
 }
 
-
+.footer__bottom-bg {
+    background-color: $light-black-color;
+}
 
 .footer__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .footer__bottom-bg {
-        background-color: $light-black-color;
-    }
 
     .footer__list {
         display: flex;
@@ -122,5 +150,8 @@
     
     .footer__icon:hover, .footer__icon:focus {
         fill: $pink-dark-color;
+    }
+    @include mobile {
+        flex-direction: column-reverse;
     }
 }

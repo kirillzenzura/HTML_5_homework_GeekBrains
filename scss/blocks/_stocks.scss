@@ -7,12 +7,20 @@
 }
 
 .stock__item {
-    width: 360px;
+    width: 31.5%;
     min-height: 260px;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-size: cover;
+    @include tablet {
+        min-height: 168px;
+    }
+    @include mobile {
+        width: 100%;
+        min-height: 247px;
+    }
 }
 
 .stock__item--woman {
@@ -41,6 +49,12 @@
     background-image: url(..//img/stock-img-shoes.jpg);
     background-repeat: no-repeat;
     min-height: 180px;
+    @include tablet {
+        min-height: 116px;
+    }
+    @include mobile {
+        min-height: 111px;
+    }
 }
 
 .stock__heading {
