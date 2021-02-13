@@ -18,13 +18,25 @@ body {
 }
 
 .container {
-    width: 1140px;
+    width: 71.3%;
     margin: 0 auto;
+
+    @media (min-width: 1600px) {
+        width: 1140px;
+    }
+
+    @include tablet {
+        width: 91.6%;
+    }
+
+    @include mobile {
+        width: 91.4%;
+    }
 }
 
 .top__wrapper {
     background-color: #F8F3F4;
-    height: 148px;
+    min-height: 148px;
     display: flex;
     align-items: center;
 }

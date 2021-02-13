@@ -45,10 +45,11 @@
                         }
     
                         .cart_quantity {
-                            width: 43px;
+                            width: 28px;
                             height: 24px;
                             align-items: center;
                             border: 1px solid #EAEAEA;
+                            padding-left: 15px;
                         }
     
                     }
@@ -97,8 +98,9 @@
             
             .cart__input {
                 margin-top: 20px;
-                width: 360px;
+                width: 360px - 16px;
                 height: 45px;
+                padding-left: 16px;
             }
 
             .cart__adress_button {
@@ -153,5 +155,9 @@
                 @include font (16px, 19px, 300);
             }
         }
+    }
+    @include tablet {
+        display:flex;
+        flex-direction: column;
     }
 }

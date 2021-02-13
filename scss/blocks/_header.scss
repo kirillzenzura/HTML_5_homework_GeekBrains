@@ -21,7 +21,7 @@
     .header__search {
         display: none;
         border-radius: 50px;
-        height: 35px;
+        min-height: 35px;
         margin-left: 10px;
         border: none;
     }
@@ -43,14 +43,14 @@
     .header__nav {
         display: none;
         position: absolute;
-        left: 1368px;
+        left: 85.2%;
         top: 75px;
-        width: 232px;
-        height: 764px;
+        width: 14.5%;
+        min-height: 764px;
         background-color: #fff;
         .header__nav-img {
             margin-top: 16px;
-            margin-left: 203px;
+            margin-left: 12.6%;
         }
         
         .header__nav-heading {
@@ -104,5 +104,15 @@
         background-color: transparent;
         border: none;
         margin: 0 0 0 33px;
+
+        @include tablet {
+            margin-left: 25px;
+        }
+    }
+
+    .header__button_hide {
+        @include mobile {
+            display: none;
+        }
     }
 }
