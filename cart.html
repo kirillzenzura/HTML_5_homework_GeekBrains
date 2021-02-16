@@ -29,15 +29,15 @@
             </div>
             <ul class="header__list">
                 <li><button class="header__button" id="menuButton">
-                        <img src="./img/burger.svg" alt="burger" max-width="32" height="32">
+                        <img src="./img/burger.svg" alt="burger" width="32" height="32">
                     </button>
                 </li>
                 <li><button class="header__button header__button_hide">
-                        <img src="./img/user.svg" alt="user" max-width="32" height="32">
+                        <img src="./img/user.svg" alt="user" width="32" height="32">
                     </button>
                 </li>
                 <li><button class="header__button header__button_hide">
-                        <img src="./img/basket.svg" alt="basket" max-width="32" height="32">
+                        <img src="./img/basket.svg" alt="basket" width="32" height="32">
                     </button>
                 </li>
             </ul>
@@ -97,8 +97,7 @@
                     <li>
                         <ul class="cart__item">
                             <li class="cart__item_img">
-                                <img src="../img/man-in-hat.jpg" class="cart__item_img" alt="man-in-hat"
-                                    class="cart__img">
+                                <img src="../img/man-in-hat.jpg" class="cart__item_img cart__img" alt="man-in-hat">
                             </li>
                             <li class="cart__info">
                                 <h2 class="cart__item_header">mango people t-shirt</h2>
@@ -116,8 +115,7 @@
                     <li>
                         <ul class="cart__item">
                             <li class="cart__item_img">
-                                <img src="../img/red-jacket.jpg" class="cart__item_img" alt="man-in-hat"
-                                    class="cart__img">
+                                <img src="../img/red-jacket.jpg" class="cart__item_img cart__img" alt="man-in-hat">
                             </li>
                             <li class="cart__info">
                                 <h2 class="cart__item_header">mango people t-shirt</h2>
@@ -139,7 +137,7 @@
                 </div>
             </div>
             <div class="cart__finish">
-                <form class="cart__adress" action="">
+                <form class="cart__adress" action="submit">
                     <h2 class="cart__adress_header">shipping adress</h2>
                     <input type="text" class="cart__input" placeholder="Country">
                     <input type="text" class="cart__input" placeholder="State">
@@ -149,7 +147,7 @@
                 <div class="cart__total">
                     <h2 class="cart__subtotal">sub total $900</h2>
                     <h3 class="cart__grand_total"> grand total <span class="cart__grand_total-pink"> $900</span></h3>
-                    <hr width="275" background-color="#E2E2E">
+                    <hr class="cart__hr">
                     <button class="cart__checkout" type="button">proceed to chekout</button>
                 </div>
             </div>
@@ -163,7 +161,7 @@
                     <p class="footer__quote-text">“Vestibulum quis porttitor dui! Quisque <span
                             class="footer__coursive">viverra nunc mi, a pulvinar purus condimentum“</span></p>
                 </div>
-                <form class="footer__form" action="">
+                <form class="footer__form" action="submit">
                     <h2 class="footer__heading">subscribe</h2>
                     <p class="footer__text"> for our newletter and promotion</p>
                     <div class="footer__subscribe-wrapper">
@@ -174,6 +172,7 @@
             </div>
         </section>
         <section class="footer__bottom-bg">
+            <h2 class="visually-hidden">footer__copyright</h2>
             <div class="footer__bottom container">
                 <p class="footer__copyright">© 2021 Brand All Rights Reserved.</p>
                 <ul class="footer__list">
@@ -194,7 +193,7 @@
                                     fill="black" />
                             </g>
                             <defs>
-                                <clipPath id="clip0">
+                                <clipPath>
                                     <rect width="14.8991" height="17" fill="white" transform="translate(8.68555 8)" />
                                 </clipPath>
                             </defs>
@@ -209,7 +208,7 @@
                                     fill="black" />
                             </g>
                             <defs>
-                                <clipPath id="clip0">
+                                <clipPath>
                                     <rect width="11.9193" height="16" fill="white" transform="translate(10.4082 8)" />
                                 </clipPath>
                             </defs>
@@ -224,7 +223,7 @@
                                     fill="black" />
                             </g>
                             <defs>
-                                <clipPath id="clip0">
+                                <clipPath>
                                     <rect width="15.8924" height="16" fill="white" transform="translate(8.1582 8)" />
                                 </clipPath>
                             </defs>
