@@ -10,15 +10,21 @@
         left: 0px;
         min-height: 764px;
         background-color: $intro-overlay-color;
+
+        @include tablet {
+            width: 60%;
+            left: 0;
+        }
+
+        @include mobile {
+            width: 0;
+            
+        }
     }
     
     .intro__wrapper {
         display: flex;
         justify-content: center;
-
-        @include tablet {
-            min-height: 368px;
-        }
 
         @include mobile {
             min-height: 363px;

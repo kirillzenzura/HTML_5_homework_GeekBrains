@@ -17,11 +17,11 @@
 
 <body>
     <ul>
-        <li><a href="/index.html">Главная</a></li>
-        <li><a href="/registration.html">Регистрация</a></li>
-        <li><a href="/catalog.html">Каталог</a></li>
-        <li> <a href="/product.html">Продукт</a></li>
-        <li><a href="/cart.html">Корзина</a></li>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="registration.html">Регистрация</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li> <a href="product.html">Продукт</a></li>
+        <li><a href="cart.html">Корзина</a></li>
     </ul>
 
     <header class="header">
@@ -122,6 +122,7 @@
             </button>
         </div>
         <section class="product container">
+            <h2 class="visually-hidden">product</h2>
             <ul class="product__info">
                 <li class="product__collection">women collection</li>
                 <li class="product__name">moschino cheap and chic</li>
@@ -129,7 +130,9 @@
                     outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
                     Completely visualize parallel core competencies rather than exceptional portals. </li>
                 <li class="product__price">$561</li>
-                <hr class="product__hr">
+                <li>
+                    <hr class="product__hr">
+                </li>
                 <li class="product__dropdowns">
                     <select class="form-select product__select" aria-label="Default select example">
                         <option selected>Choose color</option>
@@ -209,17 +212,18 @@
                     <p class="footer__quote-text">“Vestibulum quis porttitor dui! Quisque <span
                             class="footer__coursive">viverra nunc mi, a pulvinar purus condimentum“</span></p>
                 </div>
-                <form class="footer__form" action="">
+                <form class="footer__form" action="submit">
                     <h2 class="footer__heading">subscribe</h2>
                     <p class="footer__text"> for our newletter and promotion</p>
                     <div class="footer__subscribe-wrapper">
                         <input class="footer__input" type="email" placeholder="Enter Your Email">
-                        <input class="footer__subscribe" type="submit" value="Subscribe">
+                        <button class="footer__subscribe" type="submit">Subscribe</button>
                     </div>
                 </form>
             </div>
         </section>
         <section class="footer__bottom-bg">
+            <h2 class="visually-hidden">footer__copyright</h2>
             <div class="footer__bottom container">
                 <p class="footer__copyright">© 2021 Brand All Rights Reserved.</p>
                 <ul class="footer__list">
@@ -240,7 +244,7 @@
                                     fill="black" />
                             </g>
                             <defs>
-                                <clipPath id="clip0">
+                                <clipPath>
                                     <rect width="14.8991" height="17" fill="white" transform="translate(8.68555 8)" />
                                 </clipPath>
                             </defs>
@@ -255,7 +259,7 @@
                                     fill="black" />
                             </g>
                             <defs>
-                                <clipPath id="clip0">
+                                <clipPath>
                                     <rect width="11.9193" height="16" fill="white" transform="translate(10.4082 8)" />
                                 </clipPath>
                             </defs>
@@ -270,7 +274,7 @@
                                     fill="black" />
                             </g>
                             <defs>
-                                <clipPath id="clip0">
+                                <clipPath>
                                     <rect width="15.8924" height="16" fill="white" transform="translate(8.1582 8)" />
                                 </clipPath>
                             </defs>

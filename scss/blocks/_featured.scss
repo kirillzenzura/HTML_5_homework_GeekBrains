@@ -93,6 +93,8 @@
         height: 581px;
         background-color:rgba(58,56,56,0.86);
         top: 0px;
+        transition: display 700ms;
+
         @include tablet {
             width: 100%;
     }
@@ -137,9 +139,11 @@
         color: $pink-browse-color;
         text-align: center;
         padding-top: 14px;
+        transition: opacity 700ms, transform 700ms;
     }
     
     .featured__browse:hover, .featured__browse:focus {
         opacity: 0.7;
+        transform: scale(1.1);
     }
 }

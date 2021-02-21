@@ -16,6 +16,7 @@
     
     .header__logo {
         margin: 0 41px 0 0;
+        transition: opacity 700ms, transform 700ms;
     }
     
     .header__search {
@@ -23,16 +24,20 @@
         border-radius: 50px;
         min-height: 35px;
         margin-left: 10px;
+        padding-left: 10px;
         border: none;
+        transition: display 700ms, display 700ms;
     }
     
     .header__logo:hover, .header__logo:focus, .header__button:focus, .header__button:hover {
         opacity: 0.5;
+        transform: scale(1.1);
     }
 
-    .header__logo-wrapper:focus, .header__logo-wrapper:hover {
+    .header__logo-wrapper:focus, .header__logo-wrapper:hover, .header__search:hover, .header__search:focus {
         .header__search {
             display: block;
+            width: 100px;
         }    
     }
     
@@ -98,12 +103,23 @@
             line-height: 17px;
         }
         
+        @include tablet {
+            width: 40%;
+            left: 60%;
+        }
+
+        @include mobile {
+            width: 100%;
+            left: 0;
+        }
+
     }
     
     .header__button {
         background-color: transparent;
         border: none;
         margin: 0 0 0 33px;
+        transition: opacity 700ms, transform 700ms;
 
         @include tablet {
             margin-left: 25px;
