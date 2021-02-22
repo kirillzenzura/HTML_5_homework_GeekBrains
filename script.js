@@ -16,3 +16,10 @@ menuButton.addEventListener("click", function () {
     showHide(overlayMenu)
 }
 )
+
+menuButton.addEventListener("click", function () {
+    isClicked = !isClicked;
+    showHide(menu);
+    showHide(overlayMenu)
+}
+)
