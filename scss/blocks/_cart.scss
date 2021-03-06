@@ -44,6 +44,8 @@
                         margin-bottom: 36px;
                         width: 100%;
                         @include mobile {
+                            margin-bottom: 5%;
+                            margin-top: 5%;
                             font-size: 14px;
                             line-height: 17px;
                         }
@@ -72,8 +74,8 @@
                 }
     
                 .cart__delete {
-                    margin-top: 28px;
-                    margin-right: 22px;
+                    padding-top: 28px;
+                    padding-right: 22px;
                 }
                 
                 }
@@ -130,6 +132,9 @@
             @include tablet {
                 display:flex;
             }
+            @include mobile {
+                width: 100%;
+            }
         }
 
         .cart__total {
@@ -137,6 +142,7 @@
             width: 360px;
             height: 214px;
             margin-top: 58px;
+            margin-bottom: 20px;
             padding-top: 39px;
 
             .cart__subtotal {
@@ -175,6 +181,9 @@
     @include tablet {
         display:flex;
         flex-direction: column;
+    }
+    @include mobile {
+        width: 100%;
     }
 
     .cart__hr {
