@@ -614,6 +614,18 @@ body {
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .featured .featured__filter-list {
+    width: 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  .featured .featured__filter-list {
+    width: 100%;
+  }
+}
+
 .featured .featured__filter-part {
   font-size: 14px;
   line-height: 17px;

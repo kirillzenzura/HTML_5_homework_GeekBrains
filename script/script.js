@@ -1,56 +1,153 @@
-let menuButton = document.querySelector("#menuButton");
-let menu = document.querySelector("#menu");
-let overlayMenu = document.querySelector("#overlayMenu");
-let isClicked = true;
 
-function showHide(elem) {
-    if (isClicked) {
-        elem.style.display = "none";
-    } else {
-        elem.style.display = "block";
-    };
+class MenuList {
+    _menuShow() {
+        const menuButton = document.querySelector("#menuButton");
+        const menu = document.querySelector("#menu");
+        const overlayMenu = document.querySelector("#overlayMenu");
+        let isClicked = true;
+
+        function showHide(elem) {
+            if (isClicked) {
+                elem.style.display = "none";
+            } else {
+                elem.style.display = "block";
+            };
+        }
+        menuButton.addEventListener("click", function () {
+            isClicked = !isClicked;
+            showHide(menu);
+            showHide(overlayMenu)
+        }
+        )
+    }
 }
-menuButton.addEventListener("click", function () {
-    isClicked = !isClicked;
-    showHide(menu);
-    showHide(overlayMenu)
+
+
+class ProductList {
+    constructor(container = '.featured__list') {
+        this.container = container;
+        this.goods = [];
+        this._fetchProducts();
+    }
+    _fetchProducts() {
+        this.goods = [
+            {
+                id: 1, img: 'man-in-coat.jpg',
+                title: "ELLERY X M'O CAPSULE",
+                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+                price: 52,
+                color: 'Blue',
+                size: 'X1',
+                quantity: 2
+            },
+            {
+                id: 1, img: 'woman-in-suit.jpg',
+                title: "ELLERY X M'O CAPSULE",
+                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+                price: 52,
+                color: 'Blue',
+                size: 'X1',
+                quantity: 2
+            },
+            {
+                id: 1, img: 'man-in-hat.jpg',
+                title: "ELLERY X M'O CAPSULE",
+                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+                price: 52,
+                color: 'Blue',
+                size: 'X1',
+                quantity: 2
+            },
+            {
+                id: 1, img: 'man-in-tshirt.jpg',
+                title: "ELLERY X M'O CAPSULE",
+                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+                price: 52,
+                color: 'Blue',
+                size: 'X1',
+                quantity: 2
+            },
+            {
+                id: 1, img: 'aquamarine-suit.jpg',
+                title: "ELLERY X M'O CAPSULE",
+                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+                price: 52,
+                color: 'Blue',
+                size: 'X1',
+                quantity: 2
+            },
+            {
+                id: 1, img: 'woman-in-cardigan.jpg',
+                title: "ELLERY X M'O CAPSULE",
+                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+                price: 52,
+                color: 'Blue',
+                size: 'X1',
+                quantity: 2
+            },
+        ]
+    }
+    render() {
+        const block = document.querySelector(this.container);
+        for (let product of this.goods) {
+            const productObj = new ProductItem(product);
+            console.log(productObj.render());
+            block.insertAdjacentHTML('beforeend', productObj.render());
+        }
+    }
+    getSum() {
+        let total = this.goods.reduce((sum, item) => sum += item.price, 0);
+        alert(total);
+    }
 }
-)
 
-//Задание к уроку 1
-const products = [
-    { id: 1, img: 'man-in-hat.jpg', title: 'mango people t-shirt', price: 300, color: 'Blue', size: 'X1', quantity: 2 },
-    { id: 1, img: 'red-jacket.jpg', title: 'mango people t-shirt', price: 400, color: 'Red', size: 'X1', quantity: 3 },
-    { id: 1, img: 'man-italiano.jpg', title: 'mango people t-shirt', price: 600, color: 'Yellow', size: 'X1', quantity: 1 }
-];
+class ProductItem {
+    constructor(product) {
+        this.id = product.id;
+        this.img = product.img;
+        this.title = product.title;
+        this.discription = product.discription;
+        this.price = product.price;
+        this.color = product.color;
+        this.size = product.size;
+        this.quantity = product.quantity;
+    }
+    render() {
+        return `<li class="featured__item">
+        <img src="./img/${this.img}" alt="${this.img}" class="featured__img">
+        <h3 class="featured__header">${this.title}</h3>
+        <p class="featured__text">${this.discription}</p>
+        <p class="featured__price">$${this.price}</p>
+        <div class="featured__overlay"><button class="featured__overlay-btn"><img src="./img/basket.svg"
+                    alt="basket" width="32" height="32"> Add to Cart</button></div>
+    </li>`
+    }
+}
 
-//Функция для формирования верстки каждого товара
-const renderProduct = (item) => {
-    return `<li>
-    <ul class="cart__item">
-        <li class="cart__item_img">
-            <img src="./img/${item.img}" class="cart__item_img cart__img" alt="man-in-hat">
-        </li>
-        <li class="cart__info">
-            <h2 class="cart__item_header">${item.title}</h2>
-            <p class="cart__item_text">Price: <span class="cart_pink">$${item.price}</span></p>
-            <p class="cart__item_text">Color: ${item.color}</p>
-            <p class="cart__item_text">Size: ${item.size} </p>
-            <p class="cart__item_text">Quantity: <input type="text" class="cart_quantity"
-                    placeholder="${item.quantity}"></p>
-        </li>
-        <li class="cart__delete">
-            <img class="cart__delete" src="./img/close-button.svg" alt="x">
-        </li>
-    </ul>
-</li>`
-};
+let list = new ProductList();
+list.render();
+list.getSum();
+let menuListener = new MenuList();
+menuListener._menuShow();
 
-const renderPage = list => {
-    const productList = list.map(item => renderProduct(item));
-    console.log(productList);
-    document.querySelector('.cart__list').innerHTML = productList.join('');
-};
+class Cart {
+    addGoods() {
 
-renderPage(products);
+    }
+    removeGoods() {
 
+    }
+    changeGoods() {
+
+    }
+
+    render() {
+
+    }
+}
+
+class CartItem {
+    render() {
+
+    }
+}
