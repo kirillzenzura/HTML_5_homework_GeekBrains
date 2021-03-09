@@ -1,3 +1,4 @@
+const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 class MenuList {
     _menuShow() {
@@ -26,113 +27,79 @@ class MenuList {
 class ProductList {
     constructor(container = '.featured__list') {
         this.container = container;
-        this.goods = [];
-        this._fetchProducts();
+        this.goods = []; //массив товаров
+        this.allProducts = [];//массив объектов
+        this._getProducts()
+            .then(data => { //data - объект js
+                this.goods = [...data];
+                this.render()
+            });
     }
-    _fetchProducts() {
-        this.goods = [
-            {
-                id: 1, img: 'man-in-coat.jpg',
-                title: "ELLERY X M'O CAPSULE",
-                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-                price: 52,
-                color: 'Blue',
-                size: 'X1',
-                quantity: 2
-            },
-            {
-                id: 1, img: 'woman-in-suit.jpg',
-                title: "ELLERY X M'O CAPSULE",
-                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-                price: 52,
-                color: 'Blue',
-                size: 'X1',
-                quantity: 2
-            },
-            {
-                id: 1, img: 'man-in-hat.jpg',
-                title: "ELLERY X M'O CAPSULE",
-                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-                price: 52,
-                color: 'Blue',
-                size: 'X1',
-                quantity: 2
-            },
-            {
-                id: 1, img: 'man-in-tshirt.jpg',
-                title: "ELLERY X M'O CAPSULE",
-                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-                price: 52,
-                color: 'Blue',
-                size: 'X1',
-                quantity: 2
-            },
-            {
-                id: 1, img: 'aquamarine-suit.jpg',
-                title: "ELLERY X M'O CAPSULE",
-                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-                price: 52,
-                color: 'Blue',
-                size: 'X1',
-                quantity: 2
-            },
-            {
-                id: 1, img: 'woman-in-cardigan.jpg',
-                title: "ELLERY X M'O CAPSULE",
-                discription: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-                price: 52,
-                color: 'Blue',
-                size: 'X1',
-                quantity: 2
-            },
-        ]
+    _getProducts() {
+        return fetch(`${API}/catalogData.json`)
+            .then(result => result.json())
+            .catch(error => {
+                console.log(error);
+            })
     }
+
     render() {
         const block = document.querySelector(this.container);
         for (let product of this.goods) {
             const productObj = new ProductItem(product);
-            console.log(productObj.render());
+            this.allProducts.push(productObj);
             block.insertAdjacentHTML('beforeend', productObj.render());
         }
     }
     getSum() {
-        let total = this.goods.reduce((sum, item) => sum += item.price, 0);
-        alert(total);
+        return this.allProducts.reduce((accum, item) => accum += item.price, 0);
     }
 }
 
 class ProductItem {
-    constructor(product) {
-        this.id = product.id;
-        this.img = product.img;
-        this.title = product.title;
-        this.discription = product.discription;
+    constructor(product, img = 'https://placehold.it/200x150') {
+        this.title = product.product_name;
         this.price = product.price;
-        this.color = product.color;
-        this.size = product.size;
-        this.quantity = product.quantity;
+        this.id = product.id_product;
+        this.img = img;
     }
     render() {
         return `<li class="featured__item">
-        <img src="./img/${this.img}" alt="${this.img}" class="featured__img">
+        <img src="./img/man-italiano.jpg" alt="man-italiano.jpg" class="featured__img">
         <h3 class="featured__header">${this.title}</h3>
-        <p class="featured__text">${this.discription}</p>
+        <p class="featured__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
         <p class="featured__price">$${this.price}</p>
-        <div class="featured__overlay"><button class="featured__overlay-btn"><img src="./img/basket.svg"
+        <div class="featured__overlay"><button type="button" class="featured__overlay-btn" id="featured__overlay-btn-${this.id}" data-id="${this.id}" data-price="${this.price}" data-title="${this.title}" ><img src="./img/basket.svg"
                     alt="basket" width="32" height="32"> Add to Cart</button></div>
     </li>`
     }
 }
 
 let list = new ProductList();
-list.render();
-list.getSum();
 let menuListener = new MenuList();
 menuListener._menuShow();
 
 class Cart {
+    constructor(container = '.featured__list') {
+        this.container = container;
+        this.goods = []; //массив товаров
+        this.addGoods();
+    }
     addGoods() {
-
+        let buy = document.querySelector(".featured__overlay-btn");
+        buy.addEventListener('click', (e) => {
+            console.log(e.target);
+            console.log(this);
+            item = new CartItem;
+            item.id = e.target.getAttribute('data-id');
+            item.title = e.target.getAttribute('data-title');
+            item.price = e.target.getAttribute('data-price');
+            item.quantity += 1;
+            console.log(item);
+            this.goods.push(item);
+            console.log(this.goods);
+            return this.goods;
+        });
     }
     removeGoods() {
 
@@ -147,7 +114,15 @@ class Cart {
 }
 
 class CartItem {
+    constructor(id, title, price) {
+        this.id = id;
+        this.title = title;
+        this.price = price;
+        this.quantity = 0;
+    }
     render() {
 
     }
 }
+let cart = new Cart();
+console.log(cart.goods);
